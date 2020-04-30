@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.5.0.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Triangle Tracker</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Triangle Tracker</h1>
+    <p>Enter the length of each side of your triangle to discover which type of triangle you have.</p>
+
+    <div class="grid-container">
+      <form action="" id="triangle-form" class="grid-item was-validated">
+        <div class="form-group">
+          <label for="sideA">Side A</label>
+          <input type="text" id="sideA" class="form-control" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="sideB">Side B</label>
+          <input type="text" id="sideB" class="form-control" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="sideC">Side C</label>
+          <input type="text" id="sideC" class="form-control" required>
+        </div>
+  
+        <button class="btn" type="submit">Submit</button>
+      </form>
+
+      <div class="triangle-answer">
+        <h3 class="grid-item">Your triangle is a(n): <span class="result-equilateral">equilateral triangle because all sides are equal</span><span class="result-isoceles">isosceles triangle because two sides are equal</span><span class="span result-scalene">scalene triangle because none of the sides are equal.</span>.</h3>
+      </div>
+
+      <div class="not-triangle">
+        <h3>Sorry, sad trombone noise. That's not a triangle you've got there...</h3>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
