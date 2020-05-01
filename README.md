@@ -17,7 +17,7 @@ The purpose of this project is to use javascript, jQuery and branching to take i
 
 ## Known Bugs
 
-Cannot get any message aside from "equilateral" answer to show. 
+Form only accepts whole numbers, no specification regarding inches, centimeters, etc. 
 
 ## Support and contact details
 
