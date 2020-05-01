@@ -3,19 +3,32 @@ $(document).ready(function() {
 
     event.preventDefault();
     let inputA = parseInt($("#sideA").val());
-    let inputB = parseInt($("#sideA").val());
-    let inputC = parseInt($("#sideA").val());
+    let inputB = parseInt($("#sideB").val());
+    let inputC = parseInt($("#sideC").val());
 
-    if(inputA === inputB && inputB === inputC && inputC === inputA) {
+    if(inputA+inputB <= inputC || inputB+inputC <=inputA || inputC+inputA <= inputB) {
+      $(".triangle-answer").hide();
+      $(".not-triangle").show();
+
+    } else if(inputA === inputB && inputB === inputC && inputC === inputA) {
       $(".not-triangle").hide();
       $(".triangle-answer").show();
-      $(".result").text("equilateral triangle because all sides are equal")
-    } else if(inputA === inputB && inputA !== inputC || inputB === inputC && inputB !== inputA || inputC === inputA && inputB !== inputC) {
+      $(".result").text("an equilateral triangle because all sides are equal")
+      
+    } else if(inputA !== inputB && inputB !== inputC && inputC !== inputA) {
       $(".not-triangle").hide();
       $(".triangle-answer").show();
-      $(".result").text("isosceles triangle because two sides are equal");
+      $(".result").text("a scalene triangle because none of the sides are equal");
+
+    } else if(inputA === inputB || inputB === inputC || inputC === inputA){
+      $(".not-triangle").hide();
+      $(".triangle-answer").show();
+      $(".result").text("an isosceles triangle because exactly two of its sides are equal");
+
     } else {
-      alert("well that didn't work.");
+      $(".not-triangle").hide();
+      $(".triangle-answer").hide();
+      alert("Hmmm. Something's gone wrong, please try that again. Are you sure you entered numbers?")
     }
 
   });
