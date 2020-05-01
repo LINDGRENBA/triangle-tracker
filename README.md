@@ -17,7 +17,7 @@ The purpose of this project is to use javascript, jQuery and branching to take i
 
 ## Known Bugs
 
-No known bugs at this time.
+Cannot get any message aside from "equilateral" answer to show. 
 
 ## Support and contact details
 
